@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Textarea from './components/Textarea';
 
 export default class App extends React.Component {
     render() {
         return(
-            <div>
-                <h1>1</h1>
+            <div className='app'>
+                <Textarea maxlength={this.props.maxLength} disable={this.props.disableTextarea}/>
             </div>
         )
     }
