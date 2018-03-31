@@ -10,7 +10,8 @@ const Textarea = (props) =>
 
 Textarea.propTypes = {
     maxLength: PropTypes.number,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func
 };
 
 export default Textarea
