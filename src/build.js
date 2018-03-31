@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 ReactDOM.render(
-    <App maxLength={10} disableTextarea={false} />,
+    <App />,
     document.getElementById('root')
 );
