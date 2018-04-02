@@ -10,7 +10,7 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
-    value: PropTypes.number,
+    value: PropTypes.number.isRequired,
     btnSize: PropTypes.oneOf(['sm', 'md', 'lg'])
 };
 Button.defaultProps = {

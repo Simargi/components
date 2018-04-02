@@ -11,7 +11,7 @@ class Modal extends React.Component {
     };
     static propTypes = {
         closeBtn: PropTypes.bool,
-        showModal: PropTypes.bool,
+        showModal: PropTypes.bool.isRequired,
         typeModal: PropTypes.oneOf(['succ', 'fail'])
     };
     state = {

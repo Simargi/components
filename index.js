@@ -6,5 +6,10 @@ import ErrorModal from './src/components/ErrorModal';
 import SuccessModalContent from './src/components/SuccessModalContent';
 import ErrorModalContent from  './src/components/ErrorModalContent';
 import Modal from './src/components/Modal';
+import FormContainer from './src/components/FormContainer';
+import FormInput from './src/components/FormInput';
 
-export {Textarea, Button, Input, SuccessModal, ErrorModal, SuccessModalContent, ErrorModalContent, Modal}
+export {
+    Textarea, Button, Input, SuccessModal, ErrorModal, SuccessModalContent, ErrorModalContent,
+    Modal, FormContainer, FormInput
+}
