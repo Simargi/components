@@ -1,6 +1,6 @@
 {
   "name": "simargi-component",
-  "version": "0.4.1",
+  "version": "0.4.9",
   "private": false,
   "dependencies": {
     "prop-types": "^15.6.0",

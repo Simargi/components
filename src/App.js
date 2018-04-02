@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 import SuccessModal from "./components/SuccessModal";
 import ErrorModal from "./components/ErrorModal";
+import Modal from "./components/Modal";
 
 export default class App extends React.Component {
     state = {
@@ -21,8 +22,9 @@ export default class App extends React.Component {
                 <Button btnSize={'sm'} value={10}/>
                 <Input onHandler={this.changeName}/>
                 <p>{this.state.value}</p>
-                <SuccessModal closeBtn={false} showModal={false}/>
-                <ErrorModal closeBtn={true} errorReq={'bad request'} showModal={true}/>
+                <Modal typeModal={'fail'/*'fail'*/} /*closeBtn={false}*/ showModal={true} errorReqMessage={'bad fetch request'} />
+                {/*<SuccessModal closeBtn={false} showModal={false}/>*/}
+                {/*<ErrorModal closeBtn={true} errorReq={'bad request'} showModal={true}/>*/}
             </div>
         )
     }

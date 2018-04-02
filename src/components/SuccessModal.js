@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './assets/Modal.sass';
+import SuccessModalContent from "./SuccessModalContent";
 
 class SuccessModal extends React.Component {
     static defaultProps = {
@@ -31,6 +32,7 @@ class SuccessModal extends React.Component {
                     <p className='modal-title success-title'>Success</p>
                     <p className='modal-icon success-icon'>&#10004;</p>
                 </div>
+                <SuccessModalContent closeBtn={this.props.closeBtn} onClose={this.onClose} />
             </div>
         )
     }

@@ -30,7 +30,7 @@ class ErrorModal extends React.Component {
                     {this.props.closeBtn && <button className='close' onClick={this.onClose}>X</button>}
                     <p className='error-header'>{this.props.errorReq}</p>
                     <p className='modal-title error-title'>Error</p>
-                    <p className='modal-icon error-icon'>&#10004;</p>
+                    <p className='modal-icon error-icon'>&#9763;</p>
                 </div>
             </div>
         )
