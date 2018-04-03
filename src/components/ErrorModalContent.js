@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './assets/Modal.sass';
 
 const ErrorModalContent = (props) => {
     return (

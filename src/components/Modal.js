@@ -2,21 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SuccessModalContent from "./SuccessModalContent";
 import ErrorModalContent from "./ErrorModalContent";
+import './assets/Modal.sass';
 
 class Modal extends React.Component {
     static defaultProps = {
-        closeBtn: true,
-        showModal: true,
-        typeModal: ''
+        typeModal: 'success'
     };
     static propTypes = {
-        closeBtn: PropTypes.bool,
-        showModal: PropTypes.bool.isRequired,
-        typeModal: PropTypes.oneOf(['succ', 'fail'])
+        typeModal: PropTypes.oneOf(['success', 'fail'])
     };
     state = {
-        show: this.props.showModal !== 'undefined'? this.props.showModal: true,
-        classNameShowModal: 'modal-show'
+        show: true
     };
     onClose = () => {
         this.setState({
@@ -24,19 +20,20 @@ class Modal extends React.Component {
         })
     };
     render() {
-        if (!this.state.show) {
-            this.state.classNameShowModal = ''
-        }
         return (
-            <div className={'modal '+ this.state.classNameShowModal}>
-                { this.props.typeModal==='fail' && <ErrorModalContent closeBtn={!this.props.closeBtn}
-                            onClose={this.onClose}
-                            errorReqMessage={this.props.errorReqMessage}
-                /> }
-                { this.props.typeModal==='succ' && <SuccessModalContent closeBtn={this.props.closeBtn}
-                                     onClose={this.onClose}
-                /> }
+            <div>
+                {this.state.show && <div className={'modal modal-show'}>
+                    { this.props.typeModal==='fail' && <ErrorModalContent closeBtn={false}
+                                                                          onClose={this.onClose}
+                                                                          errorReqMessage={this.props.errorReqMessage}
+                    /> }
+                    { this.props.typeModal==='success' && <SuccessModalContent closeBtn={true}
+                                                                               onClose={this.onClose}
+                    /> }
+                </div>}
             </div>
+
+
         )
     }
 }
