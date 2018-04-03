@@ -6,7 +6,7 @@ import './assets/Modal.sass';
 
 class Modal extends React.Component {
     static defaultProps = {
-        typeModal: 'success'
+        typeModal: 'fail'
     };
     static propTypes = {
         typeModal: PropTypes.oneOf(['success', 'fail'])
