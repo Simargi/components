@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from "./Button";
+import './assets/Tabs.sass';
 
 class Tabs extends React.Component {
     constructor(props) {
@@ -29,9 +29,8 @@ class Tabs extends React.Component {
                 {this.props.children.map(labels)}
             </ul>
         );
-    }
+    };
     render() {
-        console.log(this.props.children)
         return (
             <div className="tabs">
                 {this._renderTitles()}
