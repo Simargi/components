@@ -13,11 +13,6 @@ export default class App extends React.Component {
         value: '',
         isLoading: true
     }
-    componentWillMount() {
-        setTimeout(()=>{
-            this.setState({isLoading: false})
-        }, 500);
-    }
     changeName = (e) => {
         this.setState({
             value: e.target.value
@@ -26,7 +21,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div className='app'>
-                { this.state.isLoading && <Loader/> }
+                <Loader time={10} />
                 <TableContainer theadData={['id','name','version']} tbodyData={[{id:1, name: 'A', version: '1'}]}/>
                 <Tabs selected={1} >
                     <TabPanel label={'Tab-1'}>
