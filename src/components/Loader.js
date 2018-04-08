@@ -21,15 +21,19 @@ class Loader extends React.Component {
             startValue++;
         }, timer)
     };
-    render () {
+    componentDidMount() {
         this.loaderProgress(this.props.time);
+    }
+    render () {
         return (
-            <div className={'loader'}>
-                <div className="spinner">
-                    <div className="double-bounce1"></div>
-                    <div className="double-bounce2"></div>
-                </div>
-                <div >{this.state.percentValue} %</div>
+            <div>
+                {this.state.percentValue < 100 && <div className={'loader'}>
+                    <div className="spinner">
+                        <div className="double-bounce1"></div>
+                        <div className="double-bounce2"></div>
+                    </div>
+                    <div>{this.state.percentValue} %</div>
+                </div> }
             </div>
         )
     }

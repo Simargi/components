@@ -21,7 +21,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div className='app'>
-                <Loader time={10} />
+                <Loader time={5} />
                 <TableContainer theadData={['id','name','version']} tbodyData={[{id:1, name: 'A', version: '1'}]}/>
                 <Tabs selected={1} >
                     <TabPanel label={'Tab-1'}>
