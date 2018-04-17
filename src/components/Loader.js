@@ -11,11 +11,9 @@ class Loader extends React.Component {
             timer = Math.round(time*1000/100),
             maxValue = 100;
         let intervalId = setInterval(() => {
-            //let percentBlock = document.getElementById('percent');
             if (startValue > maxValue) {
                 clearInterval(intervalId);
             } else {
-                //percentBlock.innerHTML = startValue;
                 this.setState({percentValue: startValue})
             }
             startValue++;
