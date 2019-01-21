@@ -6,7 +6,8 @@ import FormInput from './src/components/FormInput';
 import Tabs from './src/components/Tabs';
 import Loader from './src/components/Loader';
 import TableContainer from './src/components/TableContainer';
+import Image from './src/components/Image';
 
 export {
-    Textarea, Button, Input, Modal, FormInput, Tabs, Loader, TableContainer
+    Textarea, Button, Input, Modal, FormInput, Tabs, Loader, TableContainer, Image
 }
