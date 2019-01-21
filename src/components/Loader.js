@@ -36,6 +36,7 @@ class Loader extends React.Component {
         )
     }
 }
+
 Loader.propTypes = {
     time: PropTypes.number
 };
