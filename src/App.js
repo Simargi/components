@@ -1,5 +1,4 @@
 import React from 'react';
-import Textarea from './components/Textarea';
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Modal from "./components/Modal";
@@ -12,6 +11,9 @@ export default class App extends React.Component {
     state = {
         value: '',
         isLoading: true
+    }
+    change = () => {
+      console.log(1)
     }
     componentWillMount() {
         setTimeout(()=>{
@@ -26,6 +28,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div className='app'>
+                <Button text={'Click'} btnSize={'sm'} />
                 { this.state.isLoading && <Loader/> }
                 <TableContainer theadData={['id','name','version']} tbodyData={[{id:1, name: 'A', version: '1'}]}/>
                 <Tabs selected={1} >
@@ -40,7 +43,6 @@ export default class App extends React.Component {
                     </TabPanel>
                 </Tabs>
                 <Textarea maxlength={10} disable={false} />
-                <Button btnSize={'sm'} value={10} />
                 <Input onHandler={this.changeName}/>
                 <p>{this.state.value}</p>
                 {/*<Modal typeModal={'fail'} errorReqMessage={'bad fetch request'} />*/}
