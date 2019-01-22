@@ -1,6 +1,6 @@
 {
   "name": "simargi-component",
-  "version": "0.6.5",
+  "version": "0.6.7",
   "private": false,
   "license": "MIT",
   "author": "Simargi",
@@ -22,7 +22,6 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "bem-classnames": "^1.0.7",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.8.3",

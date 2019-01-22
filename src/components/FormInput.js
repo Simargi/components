@@ -1,25 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class FormInput extends React.Component {
-    static defaultProps = {
-        type: 'text',
-        placeholder: 'Enter text here',
-    };
-    static propTypes = {
-        type: PropTypes.string,
-        placeholder: PropTypes.string,
-        name: PropTypes.string.isRequired
-    };
-    render() {
-        return(
-            <input type={this.props.type}
-                   placeholder={this.props.placeholder}
-                   name={this.props.name}
-                   onChange={this.props.checkInputValue}
-            />
-        )
-    }
-}
+const FormInput = (props) =>
+  <input
+    id={props.id}
+    type={props.type}
+    name={props.name}
+    maxLength={props.maxLength}
+    disabled={props.disabled}
+    placeholder={props.placeholder}
+    onChange={props.onChange}
+  />
+
+FormInput.propTypes = {
+	id: PropTypes.string,
+	type: PropTypes.string,
+	name: PropTypes.string.isRequired,
+	maxLength: PropTypes.number,
+	disabled: PropTypes.bool,
+	placeholder: PropTypes.string,
+	onChange: PropTypes.func
+};
+
+FormInput.defaultProps = {
+	type: 'text'
+};
 
 export default FormInput
